@@ -22,6 +22,9 @@ class ExampleUnitTest {
         assertEquals(4, 2 + 2)
     }
 
+    /**
+     * Testing a suspended function
+     */
     @Test
     fun subtractTest() = runBlockingTest {
         val viewModel = MainViewModel()
@@ -32,6 +35,9 @@ class ExampleUnitTest {
         assertEquals(expected, actual)
     }
 
+    /**
+     * Testing a function which starts a coroutine
+     */
     @Test
     fun subtractOneTest() {
         val testContextProvider = TestContextProvider()
@@ -46,6 +52,9 @@ class ExampleUnitTest {
         assertEquals(expected, actual)
     }
 
+    /**
+     * Testing network response success
+     */
     @Test
     fun networkResponseTest() {
         val testContextProvider = TestContextProvider()
